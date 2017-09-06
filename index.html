@@ -19,6 +19,12 @@
         color: gray;
         text-align: center;
     }
+    #pic1 {
+        display: none;
+        margin: 0 auto;
+        border-radius: 50%;
+
+    }
     :root {
         --bg: #3C465C;
         --primary: gray;
@@ -137,6 +143,7 @@
         <div class="dot"></div>
     </div>
 </div>
+<img id="pic1" src="https://raw.githubusercontent.com/jeftekhari/personal_website/master/img/5.jpg" style="width:700px;height:467px">
     
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
@@ -157,6 +164,7 @@
         var z = document.getElementById('btn2');
         var i = document.getElementById('h1');
         var j = document.getElementById('shimmer');
+        var k = document.getElementById('pic1');
         if (x.style.display === 'none') {
             x.style.display = 'block';
         }
@@ -164,6 +172,7 @@
             // shimmerFunction(j);
             console.log("hi der");
             document.body.id = "shimmer";
+            k.style.display = 'block';
             x.style.display = 'none';
             y.style.display = 'none';
             z.style.display = 'none';
