@@ -4,18 +4,20 @@
 <title>Joe Eftekhari</title>
 <style type="text/css" media="screen">
     #editor { 
-        position: absolute;
+        position: relative;
         border-style: solid;
         border-color: gray;
         width: 600px;
         height: 400px;
-        top: 8%;
-        left: 36%;
+    }
+    .centered {
+        margin: 0 auto;
     }
     body {
         background-color: #272823;
     }
     h1 {
+        position: relative;
         color: gray;
         text-align: center;
     }
@@ -36,7 +38,7 @@
     * {box-sizing: border-box;}
     *:before, *:after {box-sizing: border-box;}
     .btn {
-        position: absolute;
+        position: relative;
         margin: 0 auto;
         width: var(--btn-w);
         color: var(--primary);
@@ -47,11 +49,10 @@
         font-size: 1.3em;
         line-height: 2em;
         cursor: pointer;
-        top: 48%;
-        left: 40%;
+        margin: 0 auto;
     }
     .btn2 {
-        position: absolute;
+        position: relative;
         margin: 0 auto;
         width: var(--btn-w);
         color: var(--primary);
@@ -62,8 +63,6 @@
         font-size: 1.3em;
         line-height: 2em;
         cursor: pointer;
-        top: 48%;
-        left: 50%;
     }
     .dot {
         content: '';
@@ -129,17 +128,17 @@
 </head>
 <body>
 <h1 id="h1">Find the bug.</h1>
-<div id="editor">function foo(items) {
+<div class="centered" id="editor">function foo(items) {
     var x = "There's no semi-colon here"
     return x;
 }</div>
 <div class="container"> 
     <div id="btn" onclick="nahFunction()" class="btn">
-        <span>Nah</span>
+        <span>No thanks</span>
         <div class="dot"></div>
     </div>
     <div id="btn2" onclick="yahFunction()" class="btn2">
-        <span>Yah</span>
+        <span>Found It!</span>
         <div class="dot"></div>
     </div>
 </div>
