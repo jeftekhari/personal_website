@@ -1,8 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Joe Eftekhari</title>
+<title>Joe Eftekhari</title></head>
 <style type="text/css" media="screen">
+    @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+    #social {
+        margin: 20px 10px;
+        text-align: center;
+    }
+
+    .smGlobalBtn{ /* global button class */
+        
+        display: none;
+        position: relative;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        box-shadow: 0 2px 2px #999;
+        padding: 0px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-size: 25px;
+        font-weight: normal;
+        line-height: 2em;
+        border-radius: 25px;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+    }
+
+    /* facebook button class*/
+    .facebookBtn{
+        background: #4060A5;
+    }
+
+    .facebookBtn:before{ /* use :before to add the relevant icons */
+        font-family: "FontAwesome";
+        content: "\f09a"; /* add facebook icon */
+    }
+
+    .facebookBtn:hover{
+        color: #4060A5;
+        background: #fff;
+    }
+
+    /* twitter button class*/
+    .twitterBtn{
+        background: #00ABE3;
+    }
+
+    .twitterBtn:before{
+        font-family: "FontAwesome";
+        content: "\f099"; /* add twitter icon */
+    }
+
+    .twitterBtn:hover{
+        color: #00ABE3;
+        background: #fff;
+    }
+
+    /* google plus button class*/
+    .googleplusBtn{
+        background: #e64522;
+    }
+
+    .googleplusBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0d5"; /* add googleplus icon */
+    }
+
+    .googleplusBtn:hover{
+        color: #e64522;
+        background: #fff;
+    }
+
+    /* linkedin button class*/
+    .linkedinBtn{
+        background: #0094BC;
+    }
+
+    .linkedinBtn:before{
+        font-family: "FontAwesome";
+        content: "\f0e1"; /* add linkedin icon */
+    }
+
+    .linkedinBtn:hover{
+        color: #0094BC;
+        background: #fff;
+    }
+
+    /* pinterest button class*/
+    .githubBtn{
+        background: black;
+    }
+
+    .githubBtn:before{
+        font-family: "FontAwesome";
+        content: "\f09b"; /* add pinterest icon */
+    }
+
+    .githubBtn:hover{
+        color: black;
+        background: #fff;
+    }
+
+    /* tumblr button class*/
+    .instaBtn{
+        background: #3a5876;
+    }
+
+    .instaBtn:before{
+        font-family: "FontAwesome";
+        content: "\f16d"; /* add tumblr icon */
+    }
+
+    .instaBtn:hover{
+        color: #3a5876;
+        background: #fff;
+    }
+
+    /* rss button class*/
+    .rssBtn{
+        background: #e88845;
+    }
+
+    .rssBtn:before{
+        font-family: "FontAwesome";
+        content: "\f09e"; /* add rss icon */
+    }
+
+    .rssBtn:hover{
+        color: #e88845;
+        background: #fff;
+    }
+
     #editor { 
         position: relative;
         border-style: solid;
@@ -11,6 +142,7 @@
         height: 400px;
     }
     .centered {
+        position: relative;
         margin: 0 auto;
     }
     body {
@@ -25,7 +157,12 @@
         display: none;
         margin: 0 auto;
         border-radius: 50%;
-
+    }
+    #resume {
+        display: none;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
     }
     :root {
         --bg: #3C465C;
@@ -125,7 +262,6 @@
          100%{background-position:0% 50%}
     }
 </style>
-</head>
 <body>
 <h1 id="h1">Find the bug.</h1>
 <div class="centered" id="editor">function foo(items) {
@@ -138,24 +274,27 @@
         <div class="dot"></div>
     </div>
     <div id="btn2" onclick="yahFunction()" class="btn2">
-        <span>Found It!</span>
+        <span>Found It! </span>
         <div class="dot"></div>
     </div>
 </div>
-<img id="pic1" src="https://raw.githubusercontent.com/jeftekhari/personal_website/master/img/5.jpg" style="width:700px;height:467px">
-    
+<div>
+    <img id="pic1" src="https://raw.githubusercontent.com/jeftekhari/personal_website/master/img/5.jpg" style="width:270px;height:200px">
+</div>
+<div id="social">
+    <a class="facebookBtn smGlobalBtn" href="https://www.facebook.com/jeftekhari" ></a>
+    <a class="linkedinBtn smGlobalBtn" href="https://www.linkedin.com/in/joseph-eftekhari/" ></a>
+    <a class="instaBtn smGlobalBtn" href="https://www.instagram.com/joeeftah/" ></a>
+    <a class="githubBtn smGlobalBtn" href="https://www.github.com/jeftekhari/" ></a>
+</div>
+<div>
+    <a id="resume" href="https://raw.githubusercontent.com/jeftekhari/personal_website/10bf1e6c8bf3c44f99f5f0dbceca8646a427019d/img/jeftekhari_resume.pdf"><img src="img/download.png" style="width:42px;height:42px;border:0;"></a>
+</div>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/javascript");
-
-    // function shimmerFunction(j){
-    //     if (j.style.display === 'none') {
-    //         document.body.style.backgroundColor = 'none';
-    //         j.style.display = 'block';
-    //     }
-    // }
 
     function nahFunction(){
         var x = document.getElementById('editor');
@@ -164,18 +303,24 @@
         var i = document.getElementById('h1');
         var j = document.getElementById('shimmer');
         var k = document.getElementById('pic1');
+        var l = document.getElementById('resume');
+        var m = document.getElementsByClassName('smGlobalBtn');
         if (x.style.display === 'none') {
             x.style.display = 'block';
         }
         else {
             // shimmerFunction(j);
-            console.log("hi der");
-            document.body.id = "shimmer";
-            k.style.display = 'block';
+            i.style.display = 'none';
             x.style.display = 'none';
             y.style.display = 'none';
             z.style.display = 'none';
-            i.style.display = 'none';
+            document.body.id = "shimmer";
+            k.style.display = 'block';
+            for (index = 0; index < m.length; index++) {
+                var elem = m[index];
+                elem.style.display = 'inline-block';
+            }
+            l.style.display = 'block';
         }
     }
     </script>
