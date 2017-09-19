@@ -276,7 +276,7 @@
     var x = "There's no semi-colon here"
     return x;
 }</div>
-<div class="container"> 
+<div class="container">
     <div id="btn" onclick="nahFunction()" class="btn">
         <span>No thanks</span>
         <div class="dot"></div>
@@ -286,6 +286,7 @@
         <div class="dot"></div>
     </div>
 </div>
+<h1 id="h3">Hi there, while this site is being built, please just hit "No Thanks" above to advance to my profile page. Thank you!</h1>
 <div>
     <img id="pic1" src="https://raw.githubusercontent.com/jeftekhari/personal_website/master/img/5.jpg" style="width:270px;height:200px">
 </div>
@@ -298,6 +299,11 @@
 <div>
     <a id="resume" href="https://raw.githubusercontent.com/jeftekhari/personal_website/10bf1e6c8bf3c44f99f5f0dbceca8646a427019d/img/jeftekhari_resume.pdf"><img src="https://raw.githubusercontent.com/jeftekhari/personal_website/master/img/download.png" style="width:42px;height:42px;border:0;"></a>
 </div>
+<h2 id="h4" style="display: none; text-decoration: none;">Hello! My name is Joe and I am an aspiring Software Engineer. I currently study at 42 USA and have just begun my job search. I like problem solving, teaching, playing soccer and learning. Eventually this website will have a contact option but for now if you want to reach me, please call me at 5598928549 or email at jdeftekhari@gmail.com. 
+    If you want to know more, you can visit any of my social medias, or download my resume using the downloadbutton above!<br/>
+    Thanks for visiting,<br/>
+    Joe Eftekhari
+</h2>
 <script src="src/ace.js" type="text/javascript" charset="utf-8"></script>
 <script>
     var editor = ace.edit("editor");
@@ -313,11 +319,14 @@
         var k = document.getElementById('pic1');
         var l = document.getElementById('resume');
         var m = document.getElementsByClassName('smGlobalBtn');
+        var n = document.getElementById('h3');
+        var o = document.getElementById('h4');
         if (x.style.display === 'none') {
             x.style.display = 'block';
         }
         else {
             // shimmerFunction(j);
+            n.style.display = 'none';
             i.style.display = 'none';
             x.style.display = 'none';
             y.style.display = 'none';
@@ -329,6 +338,7 @@
                 elem.style.display = 'inline-block';
             }
             l.style.display = 'block';
+            o.style.display = 'block';
         }
     }
     </script>
